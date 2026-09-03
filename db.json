@@ -1,0 +1,57 @@
+{
+  "restaurants": [
+    {
+      "id": 1783936477661,
+      "name": "KFC",
+      "cuisine": "Fast Food"
+    },
+    {
+      "id": 1784201993431,
+      "name": "Shoprite",
+      "cuisine": "snacks and meat"
+    },
+    {
+      "id": 1784202030411,
+      "name": "Chicken Republic",
+      "cuisine": "Chicken nuggets"
+    }
+  ],
+  "foods": [
+    {
+      "id": 1784114918588,
+      "name": "Jollof Rice",
+      "price": 2000,
+      "restaurantId": 1783936477661
+    },
+    {
+      "id": 1784115010485,
+      "name": "Fried Rice",
+      "price": 8000,
+      "restaurantId": 2783936487662
+    },
+    {
+      "id": 1784115037769,
+      "name": "Amala",
+      "price": 4000,
+      "restaurantId": 2753956587662
+    }
+  ],
+  "orders": [
+    {
+      "id": 1784116349216,
+      "customerName": "John Doe",
+      "food": "Jollof Rice",
+      "foodId": 1784114918588,
+      "restaurantId": 1783936477661,
+      "time": "2026-07-15T10:30:00.000Z"
+    },
+    {
+      "id": 1784202352863
+    },
+    {
+      "id": 1784202426259,
+      "name": "Chicken Republic",
+      "cuisine": "Chicken nuggets"
+    }
+  ]
+}
