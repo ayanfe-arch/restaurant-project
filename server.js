@@ -5,7 +5,16 @@ const config = require("./src/config/env");
 const connectDB = require("./src/config/database");
 
 
-const requiredEnv = ["DATABASE_URL", "JWT_SECRET"];
+const requiredConfig = [
+  ["DATABASE_URL", config.databaseUrl],
+  ["JWT_SECRET", config.jwtSecret],
+];
+
+for (const [name, value] of requiredConfig) {
+  if (!value) {
+    throw new Error(`${name} is missing from environment variables`);
+  }
+}
 
 
 connectDB()
@@ -18,10 +27,4 @@ connectDB()
     console.error("Failed to start server:", err.message);
     process.exit(1);
   });
-  
-  module.exports = {
-  port: Number(process.env.PORT || 3000),
-  databaseUrl: process.env.DATABASE_URL,
-  jwtSecret: process.env.JWT_SECRET,
-};
 
